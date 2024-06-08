@@ -60,9 +60,9 @@ async def start(_, message):
                        'Now I will send all of your stuffs here.\n' \
                        
     elif not config_dict['DM_MODE'] and message.chat.type != message.chat.type.SUPERGROUP:
-        start_string = 'Sorry, you cannot use me here!\n' \
+        start_string = 'Sorry, you cannot use me here!'
                        
-                       'Thank You'
+                       
     else:
         tag = message.from_user.mention
         start_string = 'Start me in DM, not in the group.\n' \
