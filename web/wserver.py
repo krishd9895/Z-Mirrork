@@ -886,7 +886,7 @@ def set_priority(id_):
 
 @app.route("/")
 def homepage():
-    return "<h1>Visit my channel <a href='https://telegram.me/z_mirror'>@Z_Mirror</a>on Telegram By <a href='https://telegram.me/dawn_bharat'>@Dawn_Bharat</a></h1>"
+    return "<h1>Visit my channel <a href='https://telegram.me/'>Z_Mr</a>on Telegram By <a href='https://telegram.me/'>D</a></h1>"
 
 
 @app.errorhandler(Exception)
