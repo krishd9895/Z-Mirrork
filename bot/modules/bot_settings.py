@@ -12,18 +12,18 @@ from asyncio import (
     wait_for,
 )
 from dotenv import load_dotenv
-from functools import partial
 from io import BytesIO
 from os import (
     environ,
     getcwd
 )
-from pyrogram import filters
-from pyrogram.handlers import (
+
+from nekozee import filters
+from nekozee.handlers import (
     MessageHandler,
     CallbackQueryHandler
 )
-from pyrogram.errors import (
+from nekozee.errors import (
     ListenerTimeout,
     ListenerStopped
 )
@@ -289,7 +289,7 @@ async def get_buttons(key=None, edit_type=None):
         )
         msg = """
 Send private file: config.env, token.pickle, rclone.conf, accounts.zip,
-list_drives.txt, cookies.txt, terabox.txt, .netrc or any other private file!
+list_drives.txt, cookies.txt, .netrc or any other private file!
 
 To delete private file send only the file name as text message.
 Note: Changing .netrc will not take effect for aria2c until restart.
@@ -682,7 +682,7 @@ async def edit_variable(message, pre_message, key):
                 s
             )
     elif key == "SET_COMMANDS":
-        await set_commands(client)
+        await set_commands(bot)
 
 
 async def edit_aria(message, pre_message, key):
